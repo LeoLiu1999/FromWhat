@@ -1,6 +1,6 @@
 import java.util.NoSuchElementException;
 
-public class DLLDeque<T>{
+public class DLLDeque<T> implements Deque<T>{
     private DLLNode<T> _front, _end;
     private int _size;
 

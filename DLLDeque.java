@@ -10,21 +10,27 @@ public class DLLDeque<T> implements Deque<T>{
     }
 
     public void addFirst( T x){
+	
 	DLLNode newNode = new DLLNode(x, null, _front);
 	if (_size == 0){
 	    _front = _end = newNode;
 	} else {
+	    _front.setPrev(newNode);
 	    _front = newNode;
+	    
 	}
 	_size ++;
     }
 
     public void addLast(T x){
+	
 	DLLNode newNode = new DLLNode(x, _end, null);
 	if (_size == 0){
 	    _front = _end = newNode;
 	} else {
+	    _end.setNext(newNode);
 	    _end = newNode;
+	    
 	}
 	_size ++;
     }
@@ -71,7 +77,7 @@ public class DLLDeque<T> implements Deque<T>{
 	String retStr = "";
 	DLLNode tmp = _front; //init tr
 	while( tmp != null ) {
-	    retStr += "" + tmp.getCargo();
+	    retStr += tmp.getCargo() + " ";
 	    tmp = tmp.getNext();
 	}
 	return retStr;
@@ -81,8 +87,8 @@ public class DLLDeque<T> implements Deque<T>{
     public static void main(String[] args){
 	DLLDeque ada = new DLLDeque();
 	ada.addFirst("Bob");
-	ada.addFirst("Cal");
-	ada.addFirst("Tim");
+	ada.addLast("Cal");
+	ada.addLast("Tim");
 	ada.addLast("Zoe");
 	System.out.println(ada);
 	System.out.println(ada.removeFirst());//Cal

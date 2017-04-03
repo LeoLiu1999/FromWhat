@@ -52,19 +52,39 @@ public class DLLDeque<T> implements Deque<T>{
     }
     
     public T getFirst(){
+	if(_size == 0){
+	    throw new NoSuchElementException();
+	}
 	return _front.getCargo();
     }
     
     public T getLast(){
+	if(_size == 0){
+	    throw new NoSuchElementException();
+	}
 	return _end.getCargo();
+    }
+
+    public String toString(){
+
+
+	String retStr = "";
+	DLLNode tmp = _front; //init tr
+	while( tmp != null ) {
+	    retStr += "" + tmp.getCargo();
+	    tmp = tmp.getNext();
+	}
+	return retStr;
+
     }
 
     public static void main(String[] args){
 	DLLDeque ada = new DLLDeque();
 	ada.addFirst("Bob");
 	ada.addFirst("Cal");
-	ada.addLast("Tim");
+	ada.addFirst("Tim");
 	ada.addLast("Zoe");
+	System.out.println(ada);
 	System.out.println(ada.removeFirst());//Cal
 	System.out.println(ada.removeLast());//Zoe
 	System.out.println(ada.getFirst());//Bob

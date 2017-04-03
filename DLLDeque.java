@@ -60,6 +60,14 @@ public class DLLDeque<T> implements Deque<T>{
     }
 
     public static void main(String[] args){
-	/* Make the magic happen team */
+	DLLDeque ada = new DLLDeque();
+	ada.addFirst("Bob");
+	ada.addFirst("Cal");
+	ada.addLast("Tim");
+	ada.addLast("Zoe");
+	System.out.println(ada.removeFirst());//Cal
+	System.out.println(ada.removeLast());//Zoe
+	System.out.println(ada.getFirst());//Bob
+	System.out.println(ada.getLast());//Tim
     }
 }

@@ -1,41 +1,55 @@
 # DLLDeque
 
+By Yuanchu (Leo) Liu and Nikolas Cruz-Marsted
+
 ## Methods
 
 ### addFirst
 
 Push to the front of the DLLDeque.
+
 Precondition: x is of generic type <T>
+
 Postcondition: x is now the first element of DLLDeque
 
 ### addLast
 
 Push to the end of the DLLDeque
+
 Precondition: x is of generic type <T>
+
 Postcondition: x is now the last element of DLLDeque
 
 ### removeFirst
 
 Pop the first element of the DLLDeque
+
 Precondition: DLLDeque is not empty
+
 Postcondition: Element at front of DLLDeque is removed from DLLDeque and returned
 
 ### removeLast
 
 Pop the last element of the DLLDeque
+
 Precondition: DLLDeque is not empty
+
 Postcondition: Element at end of DLLDeque is removed from DLLDeque and returned
 
 ### getFirst
 
 Peek at the first element of the DLLDeque
+
 Precondition: DLLDeque is not empty
+
 Postcondition: Element at front of DLLDeque is returned
 
 ### getLast
 
 Peek at the last element of the DLLDeque
+
 Precondition: DLLDeque is not empty
+
 Postcondition: Element at end of DLLDeque is returned
 
 ## Method selection
